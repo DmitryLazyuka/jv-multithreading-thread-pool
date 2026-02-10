@@ -18,7 +18,7 @@ public class Main {
         for (int i = 0; i < 20; i++) {
             futures.add(executorService.submit(new MyThread()));
         }
-
+        executorService.shutdown();
 
         for (Future<String> future : futures) {
             try {
